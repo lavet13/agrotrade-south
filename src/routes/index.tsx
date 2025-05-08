@@ -550,9 +550,9 @@ function Index() {
             </Card>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 items-start gap-0 lg:gap-8 mb-8 animate-hidden">
+          <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-0 lg:gap-8 mb-8 animate-hidden">
             <div
-              className="sepia-50 aspect-video bg-cover bg-center rounded-b-none rounded-lg lg:rounded-lg overflow-hidden w-full h-[211px]"
+              className="sepia-50 aspect-video bg-cover bg-center rounded-b-none rounded-lg lg:rounded-lg overflow-hidden w-full h-[200px]"
               style={{
                 backgroundImage: "url('/process-2.jpg')",
               }}
@@ -602,7 +602,7 @@ function Index() {
             </Card>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 items-start gap-0 lg:gap-8 animate-hidden">
+          <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-0 lg:gap-8 animate-hidden">
             <div
               className="bg-cover bg-center rounded-b-none rounded-lg lg:rounded-lg overflow-hidden w-full aspect-video h-[256px]"
               style={{
