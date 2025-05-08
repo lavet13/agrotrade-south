@@ -20,13 +20,27 @@ export default function Header() {
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex flex-1 items-center justify-center gap-6">
+        <nav className="hidden lg:flex flex-1 items-center justify-center gap-6">
+          <Link
+            to="."
+            hash="company"
+            className="whitespace-nowrap text-sm font-medium transition-colors hover:text-gold-500"
+          >
+            О компании
+          </Link>
           <Link
             to="."
             hash="products"
             className="text-sm font-medium transition-colors hover:text-gold-500"
           >
             Продукция
+          </Link>
+          <Link
+            to="."
+            hash="productivity"
+            className="text-sm font-medium transition-colors hover:text-gold-500"
+          >
+            Производство
           </Link>
           <Link
             to="."
@@ -62,7 +76,7 @@ export default function Header() {
           <ModeToggle />
           <Button
             variant="outline"
-            className="border-gold-200 dark:border-gold-800 text-gold-600 dark:text-gold-400 hover:bg-gold-100 dark:hover:bg-gold-900/50 md:hidden"
+            className="size-8 border-gold-200 dark:border-gold-800 text-gold-600 hover:text-gold-700 dark:text-gold-400 hover:bg-gold-100 dark:hover:bg-gold-900/50 lg:hidden"
             size="icon"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
@@ -78,8 +92,16 @@ export default function Header() {
 
       {/* Mobile Navigation */}
       {isMenuOpen && (
-        <div className="md:hidden container px-4 pb-4">
+        <div className="lg:hidden container px-4 pb-4">
           <nav className="flex flex-col space-y-3">
+            <Link
+              to="."
+              hash="company"
+              className="text-sm font-medium transition-colors hover:text-gold-500 py-2"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              О компании
+            </Link>
             <Link
               to="."
               hash="products"
@@ -87,6 +109,14 @@ export default function Header() {
               onClick={() => setIsMenuOpen(false)}
             >
               Продукция
+            </Link>
+            <Link
+              to="."
+              hash="productivity"
+              className="text-sm font-medium transition-colors hover:text-gold-500 py-2"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Производство
             </Link>
             <Link
               to="."

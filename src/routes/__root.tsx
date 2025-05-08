@@ -14,10 +14,43 @@ export const Route = createRootRoute({
   head: () => ({
     meta: [
       {
-        title: "ТехСмарт - Цифровая и домашняя электроника",
+        title: "Агротрэйд-ЮГ | Крупный экспортер зерновых и масличных культур",
         description:
-          "Ваш универсальный магазин для всей электроники и технических товаров",
+          "Более 10 лет опыта работы на рынке экспорта сельскохозяйственной продукции. Производство и поставки пшеницы, ячменя, подсолнечника, рапса и других культур с высоким контролем качества.",
       },
+      {
+        name: "keywords",
+        content:
+          "Агротрэйд-ЮГ, экспорт зерновых, пшеница, ячмень, подсолнечник, рапс, сельхозпродукция, Крым, Херсонская область, Запорожская область",
+      },
+      { name: "author", content: "ООО «АГРОТРЕЙД-ЮГ»" },
+      {
+        property: "og:title",
+        content: "Агротрэйд-ЮГ | Экспортер зерновых культур",
+      },
+      {
+        property: "og:description",
+        content:
+          "Надёжный поставщик зерновых и масличных культур с более чем 10-летним опытом работы на рынке сельхозпродукции",
+      },
+      { property: "og:type", content: "website" },
+      { property: "og:url", content: "https://www.agrotrade-yug.ru" },
+      { property: "og:image", content: "/agrotrade-south-logo.jpg" },
+      { name: "twitter:card", content: "summary_large_image" },
+      {
+        name: "twitter:title",
+        content: "Агротрэйд-ЮГ | Экспортер зерновых культур",
+      },
+      {
+        name: "twitter:description",
+        content:
+          "Надёжный поставщик зерновых и масличных культур с более чем 10-летним опытом работы на рынке сельхозпродукции",
+      },
+      { name: "twitter:image", content: "/images/agrotrade-logo.jpg" },
+      { name: "viewport", content: "width=device-width, initial-scale=1" },
+      { name: "robots", content: "index, follow" },
+      { name: "language", content: "Russian" },
+      { httpEquiv: "Content-Language", content: "ru" },
     ],
   }),
   component: () => (
