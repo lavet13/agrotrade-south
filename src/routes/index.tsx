@@ -1,10 +1,8 @@
-import { Badge } from "@/components/ui/badge";
+import AgriculturalCrops from "@/components/agricultural-crops";
+import CropProductionChart from "@/components/crop-production-chart";
 import { Card } from "@/components/ui/card";
 import {
-  ChartConfig,
   ChartContainer,
-  ChartTooltip,
-  ChartTooltipContent,
 } from "@/components/ui/chart";
 import {
   Table,
@@ -17,17 +15,12 @@ import {
 import { createFileRoute } from "@tanstack/react-router";
 import {
   Building,
-  Leaf,
   Mail,
   MapPin,
   Phone,
   Ship,
-  Sprout,
-  Sun,
-  Tractor,
   Truck,
   Wheat,
-  BarChart as BarChartIcon,
 } from "lucide-react";
 import {
   BarChart,
@@ -36,10 +29,6 @@ import {
   YAxis,
   Bar,
   Tooltip,
-  Pie,
-  PieChart,
-  LabelList,
-  Legend,
 } from "recharts";
 
 export const Route = createFileRoute("/")({
@@ -55,25 +44,10 @@ function Index() {
     { name: "ЛНР и ДНР", value: 0.82, label: "820" },
   ];
 
-  // Data for Kherson region crop production (in tons)
-  const khersonCropsData = [
-    { name: "Пшеница", value: 1015787, fill: "var(--color-gold-200)" },
-    { name: "Ячмень", value: 261810, fill: "var(--color-gold-300)" },
-    { name: "Подсолнечник", value: 251742, fill: "var(--color-gold-400)" },
-    { name: "Рапс", value: 49016, fill: "var(--color-gold-500)" },
-    { name: "Горох", value: 23992, fill: "var(--color-gold-600)" },
-  ];
-
-  const khersonCropsConfig = {
-    value: {
-      label: "тонн",
-    },
-  } satisfies ChartConfig;
-
   return (
     <>
       {/* Hero Section with Floating Icons */}
-      <section className="flex flex-col w-full min-h-[calc(100vh-3.5rem)] relative overflow-hidden">
+      <section className="flex flex-col w-full min-h-[400px] sm:min-h-[calc(100vh-3.5rem)] relative overflow-hidden">
         <div className="absolute inset-0 z-0">
           <video
             className="w-full h-full object-cover"
@@ -92,18 +66,15 @@ function Index() {
           </video>
           <div className="absolute inset-0 bg-gradient-to-b from-gold-500/50 via-gold-500/50 via-70% to-background dark:to-gray-900 dark:bg-gold-900/50"></div>
         </div>
-        <div className="container flex flex-col justify-center flex-1 px-2 md:px-6 relative z-10">
+        <div className="container flex flex-col justify-center sm:justify-start sm:mt-32 flex-1 px-2 md:px-6 relative z-10">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
             <div className="space-y-2">
-              <div className="flex items-center justify-center gap-2 mb-4">
-                <Wheat className="h-8 w-8 min-w-8 min-h-8 sm:h-12 sm:w-12 text-gold-50" />
-                <h1 className="whitespace-nowrap text-4xl xs:text-5xl font-bold tracking-tighter sm:text-6xl md:text-6xl lg:text-7xl gradient-text">
+              <div className="flex items-center justify-center gap-2 mb-4 bg-gold-50/20 px-2 sm:px-10 rounded-xl">
+                <Wheat className="h-8 w-8 min-w-8 min-h-8 sm:h-12 sm:w-12 lg:h-16 lg:w-16 text-gold-50" />
+                <h1 className="whitespace-nowrap text-4xl xs:text-5xl font-bold leading-normal tracking-tighter sm:text-6xl md:text-6xl lg:text-8xl text-white">
                   АГРОТРЭЙД-ЮГ
                 </h1>
               </div>
-              <p className="text-lg md:text-2xl font-semibold text-gold-100 dark:text-gold-200">
-                Сельскохозяйственная продукция
-              </p>
             </div>
           </div>
         </div>
@@ -118,9 +89,6 @@ function Index() {
           <div className="flex flex-col lg:flex-row justify-center gap-2">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-2 animate-hidden">
               <div className="col-span-full flex flex-col items-center justify-end space-y-4 text-center mb-8 animate-hidden">
-                <Badge className="bg-gold-100 text-gold-800 hover:bg-gold-100 dark:bg-gold-900 dark:text-gold-300 dark:hover:bg-gold-900">
-                  +10 лет опыта работы
-                </Badge>
                 <h2 className="text-center pr-5 text-3xl font-bold tracking-tighter sm:text-4xl text-gold-600 dark:text-gold-400">
                   О компании
                 </h2>
@@ -182,15 +150,12 @@ function Index() {
 
       <section
         id="productivity"
-        className="w-full py-8 md:py-24 bg-gradient-to-b from-white to-gold-50/50 dark:from-gray-900 dark:to-gold-950/30"
+        className="w-full py-8 md:py-24 bg-white dark:bg-gray-900"
       >
         <div className="container px-2 md:px-6">
           {/* Production Chart Using Shadcn/UI Component */}
           <div className="mt-4 animate-hidden">
             <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12 animate-hidden">
-              <Badge className="bg-gold-100 text-gold-800 hover:bg-gold-100 dark:bg-gold-900 dark:text-gold-300 dark:hover:bg-gold-900">
-                Производство
-              </Badge>
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-gold-600 dark:text-gold-400">
                 Объемы производства с/х продукции
               </h2>
@@ -206,11 +171,10 @@ function Index() {
                 <CartesianGrid vertical={false} />
                 <XAxis
                   dataKey="name"
-                  angle={-45}
-                  style={{ fill: "var(--color-foreground)" }}
-                  textAnchor="end"
+                  angle={0}
+                  className="[&_tspan]:fill-gold-800 dark:[&_tspan]:fill-gold-200"
                   height={70}
-                  tick={{ fontSize: 12 }}
+                  tick={{ fontSize: 14, fontWeight: 700 }}
                 />
                 <YAxis
                   tickFormatter={(value) => `${value}`}
@@ -224,11 +188,10 @@ function Index() {
                 />
                 <Tooltip
                   formatter={(value) => [`${value}`, "Объем"]}
-                  labelStyle={{ fontWeight: "bold" }}
+                  labelStyle={{ fontWeight: "bold", color: 'var(--color-gold-800)' }}
                   contentStyle={{
                     backgroundColor: "var(--color-gold-50)",
                     borderColor: "var(--color-gold-300)",
-                    color: "var(--color-gold-900)",
                   }}
                 />
                 <Bar
@@ -245,52 +208,8 @@ function Index() {
               <h3 className="text-center text-3xl font-bold tracking-tighter sm:text-4xl text-gold-600 dark:text-gold-400">
                 Производство в Херсонской области
               </h3>
-              {/* Regional Production Chart */}
-              <Badge className="self-center bg-gold-100 text-gold-800 hover:bg-gold-100 dark:bg-gold-900 dark:text-gold-300 dark:hover:bg-gold-900">
-                Объемы производства по культурам (в тоннах)
-              </Badge>
             </div>
-            <ChartContainer
-              config={khersonCropsConfig}
-              className="min-h-[300px] max-h-[550px] w-full [&_.recharts-text]:fill-gold-800 [&_.recharts-text]:font-semibold"
-            >
-              <PieChart>
-                <Tooltip
-                  formatter={(value, name) => [
-                    `${value.toLocaleString()} тонн`,
-                    name,
-                  ]}
-                  labelStyle={{ fontWeight: "bold" }}
-                  contentStyle={{
-                    backgroundColor: "var(--color-gold-50)",
-                    borderColor: "var(--color-gold-300)",
-                    color: "var(--color-gold-800)",
-                  }}
-                />
-                <Pie innerRadius={60} data={khersonCropsData} dataKey="value">
-                  <LabelList
-                    className="pointer-events-none"
-                    dataKey="name"
-                    stroke="none"
-                    fontSize={12}
-                    formatter={(value: keyof typeof khersonCropsConfig) =>
-                      value
-                    }
-                  />
-                </Pie>
-                <Legend
-                  layout="horizontal"
-                  verticalAlign="bottom"
-                  align="center"
-                  formatter={(value, _entry, index) => (
-                    <span className="text-gold-700 dark:text-gold-300">
-                      {value}: {khersonCropsData[index].value.toLocaleString()}{" "}
-                      тонны
-                    </span>
-                  )}
-                />
-              </PieChart>
-            </ChartContainer>
+            <CropProductionChart />
           </div>
         </div>
       </section>
@@ -298,13 +217,10 @@ function Index() {
       {/* Regions Section */}
       <section
         id="regions"
-        className="w-full py-8 md:py-24 bg-gradient-to-b from-white to-gold-50/50 dark:from-gray-900 dark:to-gold-950/30"
+        className="w-full py-8 md:py-24 bg-white dark:bg-gray-900"
       >
         <div className="container px-2 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12 animate-hidden">
-            <Badge className="bg-gold-100 text-gold-800 hover:bg-gold-100 dark:bg-gold-900 dark:text-gold-300 dark:hover:bg-gold-900">
-              География
-            </Badge>
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-gold-600 dark:text-gold-400">
               Территории сотрудничества
             </h2>
@@ -365,107 +281,15 @@ function Index() {
         </div>
       </section>
 
-      {/* Основные культуры Section */}
-      <section
-        id="products"
-        className="w-full py-12 md:py-16 bg-white dark:bg-gray-900"
-      >
-        <div className="container px-2 md:px-6">
-          <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12 animate-hidden">
-            <Badge className="bg-gold-100 text-gold-800 hover:bg-gold-100 dark:bg-gold-900 dark:text-gold-300 dark:hover:bg-gold-900">
-              Продукция
-            </Badge>
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-gold-600 dark:text-gold-400">
-              Основные культуры
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 animate-hidden">
-            <Card className="p-6 border-gold-200 dark:border-gold-900 shadow-gold-md card-hover-effect text-center">
-              <div className="flex flex-col items-center">
-                <div className="p-3 rounded-full bg-gold-100 dark:bg-gold-900/50 mb-4">
-                  <Wheat className="h-8 w-8 text-gold-500" />
-                </div>
-                <h3 className="text-xl font-bold text-gold-600 dark:text-gold-400">
-                  Пшеница
-                </h3>
-              </div>
-            </Card>
-
-            <Card className="p-6 border-gold-200 dark:border-gold-900 shadow-gold-md card-hover-effect text-center">
-              <div className="flex flex-col items-center">
-                <div className="p-3 rounded-full bg-gold-100 dark:bg-gold-900/50 mb-4">
-                  <Wheat className="h-8 w-8 text-gold-500" />
-                </div>
-                <h3 className="text-xl font-bold text-gold-600 dark:text-gold-400">
-                  Ячмень
-                </h3>
-              </div>
-            </Card>
-
-            <Card className="p-6 border-gold-200 dark:border-gold-900 shadow-gold-md card-hover-effect text-center">
-              <div className="flex flex-col items-center">
-                <div className="p-3 rounded-full bg-gold-100 dark:bg-gold-900/50 mb-4">
-                  <Sun className="h-8 w-8 text-gold-500" />
-                </div>
-                <h3 className="text-xl font-bold text-gold-600 dark:text-gold-400">
-                  Подсолнечник
-                </h3>
-              </div>
-            </Card>
-
-            <Card className="p-6 border-gold-200 dark:border-gold-900 shadow-gold-md card-hover-effect text-center">
-              <div className="flex flex-col items-center">
-                <div className="p-3 rounded-full bg-gold-100 dark:bg-gold-900/50 mb-4">
-                  <Sprout className="h-8 w-8 text-gold-500" />
-                </div>
-                <h3 className="text-xl font-bold text-gold-600 dark:text-gold-400">
-                  Рапс
-                </h3>
-              </div>
-            </Card>
-
-            <Card className="p-6 border-gold-200 dark:border-gold-900 shadow-gold-md card-hover-effect text-center">
-              <div className="flex flex-col items-center">
-                <div className="p-3 rounded-full bg-gold-100 dark:bg-gold-900/50 mb-4">
-                  <Sprout className="h-8 w-8 text-gold-500" />
-                </div>
-                <h3 className="text-xl font-bold text-gold-600 dark:text-gold-400">
-                  Горох
-                </h3>
-              </div>
-            </Card>
-          </div>
-
-          <div className="mt-8 text-center animate-hidden">
-            <p className="text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-              Зерновые и зернобобовые культуры: пшеница, ячмень, горох,
-              кукуруза, соя, нут, чечевица с тщательным контролем влажности и
-              уровня примесей.
-            </p>
-            <p className="text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mt-4">
-              Масличные культуры: подсолнечник и рапс с высоким содержанием
-              масла и гарантированной сортовой чистотой, включая как ГМО, так и
-              не ГМО варианты.
-            </p>
-            <p className="text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mt-4">
-              Низшие культуры: лен, кориандр, горчица с нормированными
-              показателями влажности и уровня примесей.
-            </p>
-          </div>
-        </div>
-      </section>
+      <AgriculturalCrops />
 
       {/* Quality Parameters Section */}
       <section
         id="quality"
-        className="w-full py-8 md:py-24 bg-gradient-to-b from-white to-gold-50/50 dark:from-gray-900 dark:to-gold-950/30"
+        className="w-full py-8 md:py-24 bg-white dark:bg-gray-900"
       >
         <div className="container px-2 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12 animate-hidden">
-            <Badge className="bg-gold-100 text-gold-800 hover:bg-gold-100 dark:bg-gold-900 dark:text-gold-300 dark:hover:bg-gold-900">
-              Качество
-            </Badge>
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-gold-600 dark:text-gold-400">
               Параметры качества культур
             </h2>
@@ -501,19 +325,19 @@ function Index() {
                   </TableHeader>
                   <TableBody>
                     <TableRow>
-                      <TableCell className="font-medium">Пшеница</TableCell>
+                      <TableCell className="font-bold text-gold-700 dark:text-gold-300">Пшеница</TableCell>
                       <TableCell>до 14</TableCell>
                       <TableCell>0,5 - 4</TableCell>
                       <TableCell>клоп 0,5 - 15, зерновая 1 - 8</TableCell>
                     </TableRow>
                     <TableRow>
-                      <TableCell className="font-medium">Ячмень</TableCell>
+                      <TableCell className="font-bold text-gold-700 dark:text-gold-300">Ячмень</TableCell>
                       <TableCell>до 13</TableCell>
                       <TableCell>0,5 - 4</TableCell>
                       <TableCell>до 5</TableCell>
                     </TableRow>
                     <TableRow>
-                      <TableCell className="font-medium">Горох</TableCell>
+                      <TableCell className="font-bold text-gold-700 dark:text-gold-300">Горох</TableCell>
                       <TableCell>9 - 14</TableCell>
                       <TableCell>0,8 - 2</TableCell>
                       <TableCell>
@@ -521,25 +345,25 @@ function Index() {
                       </TableCell>
                     </TableRow>
                     <TableRow>
-                      <TableCell className="font-medium">Кукуруза</TableCell>
+                      <TableCell className="font-bold text-gold-700 dark:text-gold-300">Кукуруза</TableCell>
                       <TableCell>до 14</TableCell>
                       <TableCell>0,5 - 2</TableCell>
                       <TableCell>2 - 5</TableCell>
                     </TableRow>
                     <TableRow>
-                      <TableCell className="font-medium">Соя</TableCell>
+                      <TableCell className="font-bold text-gold-700 dark:text-gold-300">Соя</TableCell>
                       <TableCell>до 12</TableCell>
                       <TableCell>0,5 - 2</TableCell>
                       <TableCell>масленичная 2 - 6, ГМО/не ГМО</TableCell>
                     </TableRow>
                     <TableRow>
-                      <TableCell className="font-medium">Нут</TableCell>
+                      <TableCell className="font-bold text-gold-700 dark:text-gold-300">Нут</TableCell>
                       <TableCell>10 - 13,5</TableCell>
                       <TableCell>0,5 - 2</TableCell>
                       <TableCell>до 5</TableCell>
                     </TableRow>
                     <TableRow>
-                      <TableCell className="font-medium">Чечевица</TableCell>
+                      <TableCell className="font-bold text-gold-700 dark:text-gold-300">Чечевица</TableCell>
                       <TableCell>12 - 14</TableCell>
                       <TableCell>0,5 - 4</TableCell>
                       <TableCell>до 5</TableCell>
@@ -581,7 +405,7 @@ function Index() {
                   </TableHeader>
                   <TableBody>
                     <TableRow>
-                      <TableCell className="font-medium">
+                      <TableCell className="font-bold text-gold-700 dark:text-gold-300">
                         Подсолнечник
                       </TableCell>
                       <TableCell>5 - 8</TableCell>
@@ -590,7 +414,7 @@ function Index() {
                       <TableCell>Не указано</TableCell>
                     </TableRow>
                     <TableRow>
-                      <TableCell className="font-medium">Рапс</TableCell>
+                      <TableCell className="font-bold text-gold-700 dark:text-gold-300">Рапс</TableCell>
                       <TableCell>5 - 8</TableCell>
                       <TableCell>0,5 - 4</TableCell>
                       <TableCell>40 - 46</TableCell>
@@ -633,21 +457,21 @@ function Index() {
                   </TableHeader>
                   <TableBody>
                     <TableRow>
-                      <TableCell className="font-medium">Лён</TableCell>
+                      <TableCell className="font-bold text-gold-700 dark:text-gold-300">Лён</TableCell>
                       <TableCell>6 - 9</TableCell>
                       <TableCell>0,5 - 7</TableCell>
                       <TableCell>2 - 5</TableCell>
                       <TableCell>32 - 42</TableCell>
                     </TableRow>
                     <TableRow>
-                      <TableCell className="font-medium">Кориандр</TableCell>
+                      <TableCell className="font-bold text-gold-700 dark:text-gold-300">Кориандр</TableCell>
                       <TableCell>5 - 8</TableCell>
                       <TableCell>2 - 9</TableCell>
                       <TableCell>2 - 7</TableCell>
                       <TableCell>-</TableCell>
                     </TableRow>
                     <TableRow>
-                      <TableCell className="font-medium">Горчица</TableCell>
+                      <TableCell className="font-bold text-gold-700 dark:text-gold-300">Горчица</TableCell>
                       <TableCell>5 - 8,5</TableCell>
                       <TableCell>0,1 - 4</TableCell>
                       <TableCell>1,5 - 5</TableCell>
@@ -658,26 +482,16 @@ function Index() {
               </div>
             </Card>
           </div>
-
-          <div className="mt-8 text-center animate-hidden">
-            <p className="text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-              Особое внимание уделяется качеству: строго контролируются
-              влажность, сор, содержание масла и зерновые примеси.
-            </p>
-          </div>
         </div>
       </section>
 
       {/* Логистические возможности Section - Pyramid Style */}
       <section
         id="logistics"
-        className="w-full py-12 md:py-16 bg-white dark:bg-gray-900"
+        className="w-full py-8 md:py-24 bg-white dark:bg-gray-900"
       >
         <div className="container px-2 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12 animate-hidden">
-            <Badge className="bg-gold-100 text-gold-800 hover:bg-gold-100 dark:bg-gold-900 dark:text-gold-300 dark:hover:bg-gold-900">
-              Логистика
-            </Badge>
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-gold-600 dark:text-gold-400">
               Логистические возможности
             </h2>
@@ -715,7 +529,7 @@ function Index() {
                 <div className="w-full p-6 bg-gold-600 text-white rounded-lg text-center shadow-lg">
                   <Building className="h-8 w-8 mx-auto mb-2" />
                   <h3 className="font-bold">Складские комплексы</h3>
-                  <p className="text-sm mt-2">Хранение и обработка продукции</p>
+                  <p className="text-sm mt-2">Хранение и отгрузка</p>
                 </div>
               </div>
             </div>
@@ -726,13 +540,10 @@ function Index() {
       {/* Contact Section */}
       <section
         id="contacts"
-        className="w-full py-8 md:py-24 bg-gradient-to-b from-white to-gold-50/50 dark:from-gray-900 dark:to-gold-950/30"
+        className="w-full py-8 md:py-24 bg-white dark:bg-gray-900"
       >
         <div className="container px-2 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12 animate-hidden">
-            <Badge className="bg-gold-100 text-gold-800 hover:bg-gold-100 dark:bg-gold-900 dark:text-gold-300 dark:hover:bg-gold-900">
-              Контакты
-            </Badge>
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-gold-600 dark:text-gold-400">
               Контактные данные «АГРОТРЭЙД - ЮГ»
             </h2>
