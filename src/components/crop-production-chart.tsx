@@ -102,15 +102,15 @@ export default function CropProductionChart() {
               <div className="relative">
                 <div
                   className="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 rounded-full flex items-center justify-center"
-                  style={{ backgroundColor: item.color, opacity: 0.8 }}
+                  style={{ backgroundColor: item.color, opacity: 1 }}
                 >
                   <Icon className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 text-white" />
                 </div>
               </div>
-              <h3 className="text-base sm:text-lg md:text-xl font-medium mt-2 md:mt-3 text-gold-600 dark:text-gold-300 text-center">
+              <h3 className="text-base sm:text-lg md:text-xl font-semibold mt-2 md:mt-3 text-gold-600 dark:text-gold-300 text-center">
                 {item.name}
               </h3>
-              <p className="text-sm sm:text-base text-gold-800 dark:text-gold-500 text-center">
+              <p className="text-sm sm:text-base text-gold-800 dark:text-gold-100 text-center">
                 {formatNumber(item.value)} тонн
               </p>
             </div>

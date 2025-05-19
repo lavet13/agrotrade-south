@@ -16,7 +16,7 @@ export default function Header() {
           className="flex items-center dark:bg-gold-900 bg-gold-50 p-0.5 px-2 rounded-2xl gap-2 mr-6 whitespace-nowrap"
         >
           <Wheat className="h-6 w-6 dark:text-gold-300 text-gold-800" />
-          <span className="text-lg text-gold-800 dark:text-gold-300 font-bold tracking-tight">АГРОТРЭЙД-ЮГ</span>
+          <span className="text-lg text-gold-800 dark:text-gold-300 font-bold tracking-tight">АГРОТРЕЙД-ЮГ</span>
         </Link>
 
         {/* Desktop Navigation */}
