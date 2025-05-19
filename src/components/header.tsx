@@ -97,7 +97,7 @@ export default function Header() {
             <Link
               to="."
               hash="company"
-              className="text-sm font-medium transition-colors hover:text-gold-500 py-2"
+              className="text-sm font-medium transition-colors dark:text-gold-400 text-gold-800 hover:text-gold-500 py-2"
               onClick={() => setIsMenuOpen(false)}
             >
               О компании
@@ -105,7 +105,7 @@ export default function Header() {
             <Link
               to="."
               hash="products"
-              className="text-sm font-medium transition-colors hover:text-gold-500 py-2"
+              className="text-sm font-medium transition-colors dark:text-gold-400 text-gold-800 hover:text-gold-500 py-2"
               onClick={() => setIsMenuOpen(false)}
             >
               Продукция
@@ -113,7 +113,7 @@ export default function Header() {
             <Link
               to="."
               hash="productivity"
-              className="text-sm font-medium transition-colors hover:text-gold-500 py-2"
+              className="text-sm font-medium transition-colors dark:text-gold-400 text-gold-800 hover:text-gold-500 py-2"
               onClick={() => setIsMenuOpen(false)}
             >
               Производство
@@ -121,7 +121,7 @@ export default function Header() {
             <Link
               to="."
               hash="regions"
-              className="text-sm font-medium transition-colors hover:text-gold-500 py-2"
+              className="text-sm font-medium transition-colors dark:text-gold-400 text-gold-800 hover:text-gold-500 py-2"
               onClick={() => setIsMenuOpen(false)}
             >
               География
@@ -129,7 +129,7 @@ export default function Header() {
             <Link
               to="."
               hash="quality"
-              className="text-sm font-medium transition-colors hover:text-gold-500 py-2"
+              className="text-sm font-medium transition-colors dark:text-gold-400 text-gold-800 hover:text-gold-500 py-2"
               onClick={() => setIsMenuOpen(false)}
             >
               Качество
@@ -137,7 +137,7 @@ export default function Header() {
             <Link
               to="."
               hash="logistics"
-              className="text-sm font-medium transition-colors hover:text-gold-500 py-2"
+              className="text-sm font-medium transition-colors dark:text-gold-400 text-gold-800 hover:text-gold-500 py-2"
               onClick={() => setIsMenuOpen(false)}
             >
               Логистика
@@ -145,7 +145,7 @@ export default function Header() {
             <Link
               to="."
               hash="contacts"
-              className="text-sm font-medium transition-colors hover:text-gold-500 py-2"
+              className="text-sm font-medium transition-colors dark:text-gold-400 text-gold-800 hover:text-gold-500 py-2"
               onClick={() => setIsMenuOpen(false)}
             >
               Контакты
