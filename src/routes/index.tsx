@@ -1,9 +1,7 @@
 import AgriculturalCrops from "@/components/agricultural-crops";
 import CropProductionChart from "@/components/crop-production-chart";
 import { Card } from "@/components/ui/card";
-import {
-  ChartContainer,
-} from "@/components/ui/chart";
+import { ChartContainer } from "@/components/ui/chart";
 import {
   Table,
   TableBody,
@@ -22,14 +20,7 @@ import {
   Truck,
   Wheat,
 } from "lucide-react";
-import {
-  BarChart,
-  CartesianGrid,
-  XAxis,
-  YAxis,
-  Bar,
-  Tooltip,
-} from "recharts";
+import { BarChart, CartesianGrid, XAxis, YAxis, Bar, Tooltip } from "recharts";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -81,10 +72,7 @@ function Index() {
       </section>
 
       {/* О компании */}
-      <section
-        id="company"
-        className="w-full py-12 md:py-16"
-      >
+      <section id="company" className="w-full py-12 md:py-16">
         <div className="container px-4 md:px-6">
           <div className="flex flex-col lg:flex-row justify-center gap-2">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-2 animate-hidden">
@@ -148,10 +136,7 @@ function Index() {
         </div>
       </section>
 
-      <section
-        id="productivity"
-        className="w-full py-8 md:py-24"
-      >
+      <section id="productivity" className="w-full py-8 md:py-24">
         <div className="container px-2 md:px-6">
           {/* Production Chart Using Shadcn/UI Component */}
           <div className="mt-4 animate-hidden">
@@ -188,7 +173,10 @@ function Index() {
                 />
                 <Tooltip
                   formatter={(value) => [`${value}`, "Объем"]}
-                  labelStyle={{ fontWeight: "bold", color: 'var(--color-gold-800)' }}
+                  labelStyle={{
+                    fontWeight: "bold",
+                    color: "var(--color-gold-800)",
+                  }}
                   contentStyle={{
                     backgroundColor: "var(--color-gold-50)",
                     borderColor: "var(--color-gold-300)",
@@ -215,10 +203,7 @@ function Index() {
       </section>
 
       {/* Regions Section */}
-      <section
-        id="regions"
-        className="w-full py-8 md:py-24"
-      >
+      <section id="regions" className="w-full py-8 md:py-24">
         <div className="container px-2 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12 animate-hidden">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl lg:text-5xl text-gold-500 dark:text-gold-300">
@@ -284,10 +269,7 @@ function Index() {
       <AgriculturalCrops />
 
       {/* Quality Parameters Section */}
-      <section
-        id="quality"
-        className="w-full py-8 md:py-24"
-      >
+      <section id="quality" className="w-full py-8 md:py-24">
         <div className="container px-2 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12 animate-hidden">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-gold-500 dark:text-gold-300">
@@ -325,19 +307,25 @@ function Index() {
                   </TableHeader>
                   <TableBody className="[&_td]:not-first:text-gold-800 dark:[&_td]:not-first:text-gold-100">
                     <TableRow>
-                      <TableCell className="font-bold text-gold-500 dark:text-gold-300">Пшеница</TableCell>
+                      <TableCell className="font-bold text-gold-500 dark:text-gold-300">
+                        Пшеница
+                      </TableCell>
                       <TableCell>до 14</TableCell>
                       <TableCell>0,5 - 4</TableCell>
                       <TableCell>клоп 0,5 - 15, зерновая 1 - 8</TableCell>
                     </TableRow>
                     <TableRow>
-                      <TableCell className="font-bold text-gold-500 dark:text-gold-300">Ячмень</TableCell>
+                      <TableCell className="font-bold text-gold-500 dark:text-gold-300">
+                        Ячмень
+                      </TableCell>
                       <TableCell>до 13</TableCell>
                       <TableCell>0,5 - 4</TableCell>
                       <TableCell>до 5</TableCell>
                     </TableRow>
                     <TableRow>
-                      <TableCell className="font-bold text-gold-500 dark:text-gold-300">Горох</TableCell>
+                      <TableCell className="font-bold text-gold-500 dark:text-gold-300">
+                        Горох
+                      </TableCell>
                       <TableCell>9 - 14</TableCell>
                       <TableCell>0,8 - 2</TableCell>
                       <TableCell>
@@ -345,25 +333,33 @@ function Index() {
                       </TableCell>
                     </TableRow>
                     <TableRow>
-                      <TableCell className="font-bold text-gold-500 dark:text-gold-300">Кукуруза</TableCell>
+                      <TableCell className="font-bold text-gold-500 dark:text-gold-300">
+                        Кукуруза
+                      </TableCell>
                       <TableCell>до 14</TableCell>
                       <TableCell>0,5 - 2</TableCell>
                       <TableCell>2 - 5</TableCell>
                     </TableRow>
                     <TableRow>
-                      <TableCell className="font-bold text-gold-500 dark:text-gold-300">Соя</TableCell>
+                      <TableCell className="font-bold text-gold-500 dark:text-gold-300">
+                        Соя
+                      </TableCell>
                       <TableCell>до 12</TableCell>
                       <TableCell>0,5 - 2</TableCell>
                       <TableCell>масленичная 2 - 6, ГМО/не ГМО</TableCell>
                     </TableRow>
                     <TableRow>
-                      <TableCell className="font-bold text-gold-500 dark:text-gold-300">Нут</TableCell>
+                      <TableCell className="font-bold text-gold-500 dark:text-gold-300">
+                        Нут
+                      </TableCell>
                       <TableCell>10 - 13,5</TableCell>
                       <TableCell>0,5 - 2</TableCell>
                       <TableCell>до 5</TableCell>
                     </TableRow>
                     <TableRow>
-                      <TableCell className="font-bold text-gold-500 dark:text-gold-300">Чечевица</TableCell>
+                      <TableCell className="font-bold text-gold-500 dark:text-gold-300">
+                        Чечевица
+                      </TableCell>
                       <TableCell>12 - 14</TableCell>
                       <TableCell>0,5 - 4</TableCell>
                       <TableCell>до 5</TableCell>
@@ -414,7 +410,9 @@ function Index() {
                       <TableCell>Не указано</TableCell>
                     </TableRow>
                     <TableRow>
-                      <TableCell className="font-bold text-gold-500 dark:text-gold-300">Рапс</TableCell>
+                      <TableCell className="font-bold text-gold-500 dark:text-gold-300">
+                        Рапс
+                      </TableCell>
                       <TableCell>5 - 8</TableCell>
                       <TableCell>0,5 - 4</TableCell>
                       <TableCell>40 - 46</TableCell>
@@ -457,21 +455,27 @@ function Index() {
                   </TableHeader>
                   <TableBody className="[&_td]:not-first:text-gold-800 dark:[&_td]:not-first:text-gold-100">
                     <TableRow>
-                      <TableCell className="font-bold text-gold-500 dark:text-gold-300">Лён</TableCell>
+                      <TableCell className="font-bold text-gold-500 dark:text-gold-300">
+                        Лён
+                      </TableCell>
                       <TableCell>6 - 9</TableCell>
                       <TableCell>0,5 - 7</TableCell>
                       <TableCell>2 - 5</TableCell>
                       <TableCell>32 - 42</TableCell>
                     </TableRow>
                     <TableRow>
-                      <TableCell className="font-bold text-gold-500 dark:text-gold-300">Кориандр</TableCell>
+                      <TableCell className="font-bold text-gold-500 dark:text-gold-300">
+                        Кориандр
+                      </TableCell>
                       <TableCell>5 - 8</TableCell>
                       <TableCell>2 - 9</TableCell>
                       <TableCell>2 - 7</TableCell>
                       <TableCell>-</TableCell>
                     </TableRow>
                     <TableRow>
-                      <TableCell className="font-bold text-gold-500 dark:text-gold-300">Горчица</TableCell>
+                      <TableCell className="font-bold text-gold-500 dark:text-gold-300">
+                        Горчица
+                      </TableCell>
                       <TableCell>5 - 8,5</TableCell>
                       <TableCell>0,1 - 4</TableCell>
                       <TableCell>1,5 - 5</TableCell>
@@ -486,10 +490,7 @@ function Index() {
       </section>
 
       {/* Логистические возможности Section - Pyramid Style */}
-      <section
-        id="logistics"
-        className="w-full py-8 md:py-24"
-      >
+      <section id="logistics" className="w-full py-8 md:py-24">
         <div className="container px-2 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12 animate-hidden">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-gold-500 dark:text-gold-300">
@@ -538,17 +539,16 @@ function Index() {
       </section>
 
       {/* Contact Section */}
-      <section
-        id="contacts"
-        className="w-full py-8 md:py-24"
-      >
+      <section id="contacts" className="w-full py-8 md:py-24">
         <div className="container px-2 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12 animate-hidden">
             <h2 className="hidden md:block text-3xl font-bold tracking-tighter sm:text-4xl text-gold-500 dark:text-gold-300">
               Контактные данные «АГРОТРЕЙД - ЮГ»
             </h2>
             <h2 className="block md:hidden text-3xl font-bold tracking-tighter sm:text-4xl text-gold-500 dark:text-gold-300">
-              Контактные данные<br />«АГРОТРЕЙД - ЮГ»
+              Контактные данные
+              <br />
+              «АГРОТРЕЙД - ЮГ»
             </h2>
           </div>
 
@@ -572,17 +572,23 @@ function Index() {
               </h3>
               <div className="grid grid-cols-1 gap-4">
                 <div>
-                  <p className="font-semibold text-gold-500 dark:text-gold-300">ОГРН</p>
+                  <p className="font-semibold text-gold-500 dark:text-gold-300">
+                    ОГРН
+                  </p>
                   <p className="text-gold-800 dark:text-gold-200">
                     1159102102500
                   </p>
                 </div>
                 <div>
-                  <p className="font-semibold text-gold-500 dark:text-gold-300">ИНН</p>
+                  <p className="font-semibold text-gold-500 dark:text-gold-300">
+                    ИНН
+                  </p>
                   <p className="text-gold-800 dark:text-gold-200">9105013878</p>
                 </div>
                 <div>
-                  <p className="font-semibold text-gold-500 dark:text-gold-300">КПП</p>
+                  <p className="font-semibold text-gold-500 dark:text-gold-300">
+                    КПП
+                  </p>
                   <p className="text-gold-800 dark:text-gold-200">910501001</p>
                 </div>
               </div>
@@ -597,8 +603,14 @@ function Index() {
                   <Phone className="min-h-5 min-w-5 h-5 w-5 text-gold-500 dark:text-gold-400 mt-0.5" />
                   <div>
                     <p className="text-gold-800 dark:text-gold-200">
-                      Генеральный директор: <a className="text-gold-500 dark:text-gold-200 decoration-1 underline hover:decoration-2 underline-offset-4" href="tel:+79780630610">+7(978) 063-06-10</a> | <a className="text-gold-500 dark:text-gold-200 decoration-1 underline hover:decoration-2 underline-offset-4" href="https://t.me/+79780630610">Telegram</a> | <a className="text-gold-500 dark:text-gold-200 decoration-1 underline hover:decoration-2 underline-offset-4" href="https://wa.me/+79780630610">Whatsapp</a> Бессмертный Виктор
-                      Викторович
+                      Генеральный директор:{" "}
+                      <a
+                        className="text-gold-500 dark:text-gold-200 decoration-1 underline hover:decoration-2 underline-offset-4"
+                        href="tel:+79780630610"
+                      >
+                        +7(978) 063-06-10
+                      </a>
+                      , Бессмертный Виктор Викторович
                     </p>
                   </div>
                 </div>
@@ -606,8 +618,75 @@ function Index() {
                   <Phone className="min-w-5 min-h-5 h-5 w-5 text-gold-500 dark:text-gold-400 mt-0.5" />
                   <div>
                     <p className="text-gold-800 dark:text-gold-200">
-                      Первый заместитель: <a className="text-gold-500 dark:text-gold-200 decoration-1 underline hover:decoration-2 underline-offset-4" href="tel:+79784661456">+7(978) 466-14-56</a> | <a className="text-gold-500 dark:text-gold-200 decoration-1 underline hover:decoration-2 underline-offset-4" href="https://t.me/+79784661456">Telegram</a> | <a className="text-gold-500 dark:text-gold-200 decoration-1 underline hover:decoration-2 underline-offset-4" href="https://wa.me/+79784661456">Whatsapp</a>, Антонова Юлия
-                      Александровна
+                      Первый заместитель:{" "}
+                      <div className="inline-flex gap-2">
+                      <a
+                        className="text-gold-500 dark:text-gold-200 decoration-1 underline hover:decoration-2 underline-offset-4"
+                        href="tel:+79784661456"
+                      >
+                        +7(978) 466-14-56
+                      </a>
+                      <a
+                        className="inline-flex items-center gap-1 text-gold-500 dark:text-gold-200 decoration-1 underline hover:decoration-2 underline-offset-4"
+                        href="https://t.me/+79784661456"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 333334 333334"
+                          shapeRendering="geometricPrecision"
+                          textRendering="geometricPrecision"
+                          imageRendering="optimizeQuality"
+                          fillRule="evenodd"
+                          clipRule="evenodd"
+                          className={
+                            "self-center w-[22px] h-[22px] fill-gold-500 transition-colors"
+                          }
+                        >
+                          <path d="M166667 0c92048 0 166667 74619 166667 166667s-74619 166667-166667 166667S0 258715 0 166667 74619 0 166667 0zm80219 91205l-29735 149919s-4158 10396-15594 5404l-68410-53854s76104-68409 79222-71320c3119-2911 2079-3534 2079-3534 207-3535-5614 0-5614 0l-100846 64043-42002-14140s-6446-2288-7069-7277c-624-4992 7277-7694 7277-7694l166970-65498s13722-6030 13722 3951zm-87637 122889l-27141 24745s-2122 1609-4443 601l5197-45965 26387 20619z" />
+                        </svg>
+                      </a>
+                      <a
+                        className="inline-flex items-center text-gold-500 dark:text-gold-200 decoration-1 underline hover:decoration-2 underline-offset-4"
+                        href="https://wa.me/+79784661456"
+                      >
+                        <svg
+                          className={"self-center w-[22px] h-[22px] fill-gold-500 transition-colors"}
+                          version="1.1"
+                          id="Layer_1"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 308 308"
+                          fill="none"
+                          stroke="currentColor"
+                        >
+                          <g id="XMLID_468_">
+                            <path
+                              id="XMLID_469_"
+                              d="M227.904,176.981c-0.6-0.288-23.054-11.345-27.044-12.781c-1.629-0.585-3.374-1.156-5.23-1.156
+		c-3.032,0-5.579,1.511-7.563,4.479c-2.243,3.334-9.033,11.271-11.131,13.642c-0.274,0.313-0.648,0.687-0.872,0.687
+		c-0.201,0-3.676-1.431-4.728-1.888c-24.087-10.463-42.37-35.624-44.877-39.867c-0.358-0.61-0.373-0.887-0.376-0.887
+		c0.088-0.323,0.898-1.135,1.316-1.554c1.223-1.21,2.548-2.805,3.83-4.348c0.607-0.731,1.215-1.463,1.812-2.153
+		c1.86-2.164,2.688-3.844,3.648-5.79l0.503-1.011c2.344-4.657,0.342-8.587-0.305-9.856c-0.531-1.062-10.012-23.944-11.02-26.348
+		c-2.424-5.801-5.627-8.502-10.078-8.502c-0.413,0,0,0-1.732,0.073c-2.109,0.089-13.594,1.601-18.672,4.802
+		c-5.385,3.395-14.495,14.217-14.495,33.249c0,17.129,10.87,33.302,15.537,39.453c0.116,0.155,0.329,0.47,0.638,0.922
+		c17.873,26.102,40.154,45.446,62.741,54.469c21.745,8.686,32.042,9.69,37.896,9.69c0.001,0,0.001,0,0.001,0
+		c2.46,0,4.429-0.193,6.166-0.364l1.102-0.105c7.512-0.666,24.02-9.22,27.775-19.655c2.958-8.219,3.738-17.199,1.77-20.458
+		C233.168,179.508,230.845,178.393,227.904,176.981z"
+                            />
+                            <path
+                              id="XMLID_470_"
+                              d="M156.734,0C73.318,0,5.454,67.354,5.454,150.143c0,26.777,7.166,52.988,20.741,75.928L0.212,302.716
+		c-0.484,1.429-0.124,3.009,0.933,4.085C1.908,307.58,2.943,308,4,308c0.405,0,0.813-0.061,1.211-0.188l79.92-25.396
+		c21.87,11.685,46.588,17.853,71.604,17.853C240.143,300.27,308,232.923,308,150.143C308,67.354,240.143,0,156.734,0z
+		 M156.734,268.994c-23.539,0-46.338-6.797-65.936-19.657c-0.659-0.433-1.424-0.655-2.194-0.655c-0.407,0-0.815,0.062-1.212,0.188
+		l-40.035,12.726l12.924-38.129c0.418-1.234,0.209-2.595-0.561-3.647c-14.924-20.392-22.813-44.485-22.813-69.677
+		c0-65.543,53.754-118.867,119.826-118.867c66.064,0,119.812,53.324,119.812,118.867
+		C276.546,215.678,222.799,268.994,156.734,268.994z"
+                            />
+                          </g>
+                        </svg>
+                      </a>
+                      </div>
+                      , Антонова Юлия Александровна
                     </p>
                   </div>
                 </div>
@@ -620,7 +699,10 @@ function Index() {
               </h3>
               <div className="flex items-start gap-4">
                 <Mail className="min-w-5 min-h-5 h-5 w-5 text-gold-500 dark:text-gold-400 mt-0.5" />
-                <a href="mailto:zerno_ru@bk.ru" className="text-gold-500 dark:text-gold-200 decoration-1 underline hover:decoration-2 underline-offset-4">
+                <a
+                  href="mailto:zerno_ru@bk.ru"
+                  className="text-gold-500 dark:text-gold-200 decoration-1 underline hover:decoration-2 underline-offset-4"
+                >
                   zerno_ru@bk.ru
                 </a>
               </div>
