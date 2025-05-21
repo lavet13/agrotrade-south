@@ -622,13 +622,13 @@ function Index() {
                       <div className="inline-flex gap-2">
                       <a
                         className="text-gold-500 dark:text-gold-200 decoration-1 underline hover:decoration-2 underline-offset-4"
-                        href="tel:+79784661456"
+                        href="tel:+79785280549"
                       >
-                        +7(978) 466-14-56
+                        +7(978) 528-05-49
                       </a>
                       <a
                         className="inline-flex items-center gap-1 text-gold-500 dark:text-gold-200 decoration-1 underline hover:decoration-2 underline-offset-4"
-                        href="https://t.me/+79784661456"
+                        href="https://t.me/+79785280549"
                       >
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
@@ -647,7 +647,7 @@ function Index() {
                       </a>
                       <a
                         className="inline-flex items-center text-gold-500 dark:text-gold-200 decoration-1 underline hover:decoration-2 underline-offset-4"
-                        href="https://wa.me/+79784661456"
+                        href="https://wa.me/+79785280549"
                       >
                         <svg
                           className={"self-center w-[22px] h-[22px] fill-gold-500 dark:fill-gold-200 transition-colors"}
