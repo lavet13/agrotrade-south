@@ -69,11 +69,8 @@ function Index() {
         <div className="container flex flex-col justify-center sm:justify-start sm:mt-32 flex-1 px-2 md:px-6 relative z-10">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
             <div className="space-y-2">
-              <div className="flex items-center justify-center gap-2 mb-4 bg-gold-50/20 px-2 sm:px-10 rounded-xl">
-                <Wheat className="h-8 w-8 min-w-8 min-h-8 sm:h-12 sm:w-12 lg:h-16 lg:w-16 text-white" />
-                <h1 className="whitespace-nowrap text-4xl xs:text-5xl font-bold leading-normal tracking-tighter sm:text-6xl md:text-6xl lg:text-8xl text-white">
-                  АГРОТРЕЙД-ЮГ
-                </h1>
+              <div className="flex items-center justify-center gap-2 mb-4 bg-gold-50/20 px-1 sm:px-4 rounded-xl bg-gold-100/50">
+                <img className="object-cover mix-blend-multiply rounded-xl" src="/logo.jpg" />
               </div>
             </div>
           </div>
@@ -545,7 +542,7 @@ function Index() {
         <div className="container px-2 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12 animate-hidden">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-gold-700 dark:text-gold-300">
-              Контактные данные «АГРОТРЭЙД - ЮГ»
+              Контактные данные «АГРОТРЕЙД - ЮГ»
             </h2>
           </div>
 
