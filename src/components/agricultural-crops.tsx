@@ -18,7 +18,7 @@ export default function AgriculturalCrops() {
       <div className="container px-4 mx-auto max-w-7xl">
         {/* Header with refined styling */}
         <div className="flex flex-col items-center justify-center mb-12 text-center">
-          <h2 className="text-4xl font-bold tracking-tight mb-3 text-gold-700 dark:text-gold-300">
+          <h2 className="text-4xl font-bold tracking-tight mb-3 text-gold-500 dark:text-gold-300">
             Основные культуры
           </h2>
         </div>

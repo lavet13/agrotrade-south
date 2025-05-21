@@ -15,7 +15,7 @@ export default function Header() {
           activeOptions={{ exact: true }}
           className="flex items-center p-0.5 px-2 rounded-2xl gap-2 mr-6 whitespace-nowrap bg-gold-100/50 dark:bg-gold-100"
         >
-          <img className="w-[200px] mix-blend-multiply" src="/logo.jpg" />
+          <img className="rounded-2xl w-[200px] mix-blend-multiply" src="/logo.jpg" />
         </Link>
 
         {/* Desktop Navigation */}

@@ -12,7 +12,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
 import {
   Building,
   Mail,
@@ -69,9 +69,9 @@ function Index() {
         <div className="container flex flex-col justify-center sm:justify-start sm:mt-32 flex-1 px-2 md:px-6 relative z-10">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
             <div className="space-y-2">
-              <div className="flex items-center justify-center gap-2 mb-4 bg-gold-50/20 px-2 sm:px-10 rounded-xl">
-                <Wheat className="h-8 w-8 min-w-8 min-h-8 sm:h-12 sm:w-12 lg:h-16 lg:w-16 text-white" />
-                <h1 className="whitespace-nowrap text-4xl xs:text-5xl font-bold leading-normal tracking-tighter sm:text-6xl md:text-6xl lg:text-8xl text-white">
+              <div className="flex items-center justify-center gap-2 mb-4 bg-gold-200/90 px-2 sm:px-10 rounded-xl">
+                <Wheat className="h-8 w-8 min-w-8 min-h-8 sm:h-12 sm:w-12 lg:h-16 lg:w-16 text-gold-500" />
+                <h1 className="whitespace-nowrap text-4xl xs:text-5xl font-bold leading-normal tracking-tighter sm:text-6xl md:text-6xl lg:text-8xl text-gold-500">
                   АГРОТРЕЙД-ЮГ
                 </h1>
               </div>
@@ -89,17 +89,17 @@ function Index() {
           <div className="flex flex-col lg:flex-row justify-center gap-2">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-2 animate-hidden">
               <div className="col-span-full flex flex-col items-center justify-end space-y-4 text-center mb-8 animate-hidden">
-                <h2 className="text-center pr-5 text-3xl font-bold tracking-tighter sm:text-4xl lg:text-5xl text-gold-700 dark:text-gold-300">
+                <h2 className="text-center pr-5 text-3xl font-bold tracking-tighter sm:text-4xl lg:text-5xl text-gold-500 dark:text-gold-300">
                   О компании
                 </h2>
               </div>
               <Card className="p-6 border-gold-200 dark:border-gold-900 shadow-gold-md card-hover-effect">
                 <div className="flex items-center gap-2 mb-4">
                   <div className="self-start p-2 rounded-full bg-gold-100 dark:bg-gold-900/50">
-                    <Building className="min-w-5 min-h-5 h-5 w-5 text-gold-600 dark:text-gold-400" />
+                    <Building className="min-w-5 min-h-5 h-5 w-5 text-gold-500 dark:text-gold-400" />
                   </div>
                   <div className="text-left">
-                    <h3 className="text-lg font-semibold text-gold-700 dark:text-gold-300">
+                    <h3 className="text-lg font-semibold text-gold-500 dark:text-gold-300">
                       Опыт работы
                     </h3>
                     <p className="text-gold-800 dark:text-gold-100">
@@ -111,10 +111,10 @@ function Index() {
               <Card className="p-6 border-gold-200 dark:border-gold-900 shadow-gold-md card-hover-effect">
                 <div className="flex items-center gap-2 mb-4">
                   <div className="self-start p-2 rounded-full bg-gold-100 dark:bg-gold-900/50">
-                    <Wheat className="min-w-5 min-h-5 h-5 w-5 text-gold-600 dark:text-gold-300" />
+                    <Wheat className="min-w-5 min-h-5 h-5 w-5 text-gold-500 dark:text-gold-300" />
                   </div>
                   <div className="text-left">
-                    <h3 className="text-lg font-semibold text-gold-700 dark:text-gold-300">
+                    <h3 className="text-lg font-semibold text-gold-500 dark:text-gold-300">
                       Аккредитация
                     </h3>
                     <p className="text-gold-800 dark:text-gold-100">
@@ -126,10 +126,10 @@ function Index() {
               <Card className="col-span-full p-6 border-gold-200 dark:border-gold-900 shadow-gold-md card-hover-effect">
                 <div className="flex items-center gap-2 mb-4">
                   <div className="p-2 self-start rounded-full bg-gold-100 dark:bg-gold-900/50">
-                    <MapPin className="min-w-5 min-h-5 h-5 w-5 text-gold-600 dark:text-gold-300" />
+                    <MapPin className="min-w-5 min-h-5 h-5 w-5 text-gold-500 dark:text-gold-300" />
                   </div>
                   <div className="text-left">
-                    <h3 className="text-lg font-semibold text-gold-700 dark:text-gold-300">
+                    <h3 className="text-lg font-semibold text-gold-500 dark:text-gold-300">
                       География
                     </h3>
                     <p className="text-gold-800 dark:text-gold-100">
@@ -156,7 +156,7 @@ function Index() {
           {/* Production Chart Using Shadcn/UI Component */}
           <div className="mt-4 animate-hidden">
             <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12 animate-hidden">
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl lg:text-5xl text-gold-700 dark:text-gold-300">
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl lg:text-5xl text-gold-500 dark:text-gold-300">
                 Объемы производства с/х продукции
               </h2>
             </div>
@@ -205,7 +205,7 @@ function Index() {
 
           <div className="mt-4 animate-hidden">
             <div className="flex flex-col gap-3 justify-center">
-              <h3 className="text-center text-3xl font-bold tracking-tighter sm:text-4xl lg:text-5xl text-gold-700 dark:text-gold-300">
+              <h3 className="text-center text-3xl font-bold tracking-tighter sm:text-4xl lg:text-5xl text-gold-500 dark:text-gold-300">
                 Производство в Херсонской области
               </h3>
             </div>
@@ -221,7 +221,7 @@ function Index() {
       >
         <div className="container px-2 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12 animate-hidden">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl lg:text-5xl text-gold-700 dark:text-gold-300">
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl lg:text-5xl text-gold-500 dark:text-gold-300">
               Территории сотрудничества
             </h2>
           </div>
@@ -235,7 +235,7 @@ function Index() {
                 }}
               ></div>
               <div className="p-6">
-                <h3 className="text-xl font-bold mb-2 text-gold-600 dark:text-gold-400">
+                <h3 className="text-xl font-bold mb-2 text-gold-500 dark:text-gold-400">
                   Республика Крым
                 </h3>
                 <p className="text-gold-800 dark:text-gold-200">
@@ -252,7 +252,7 @@ function Index() {
                 }}
               ></div>
               <div className="p-6">
-                <h3 className="text-xl font-bold mb-2 text-gold-600 dark:text-gold-400">
+                <h3 className="text-xl font-bold mb-2 text-gold-500 dark:text-gold-400">
                   Херсонская и Запорожская области
                 </h3>
                 <p className="text-gold-800 dark:text-gold-200">
@@ -269,7 +269,7 @@ function Index() {
                 }}
               ></div>
               <div className="p-6">
-                <h3 className="text-xl font-bold mb-2 text-gold-600 dark:text-gold-400">
+                <h3 className="text-xl font-bold mb-2 text-gold-500 dark:text-gold-400">
                   ДНР и ЛНР
                 </h3>
                 <p className="text-gold-800 dark:text-gold-200">
@@ -290,7 +290,7 @@ function Index() {
       >
         <div className="container px-2 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12 animate-hidden">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-gold-700 dark:text-gold-300">
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-gold-500 dark:text-gold-300">
               Параметры качества культур
             </h2>
           </div>
@@ -312,7 +312,7 @@ function Index() {
               <div className="overflow-x-auto">
                 <Table>
                   <TableHeader>
-                    <TableRow>
+                    <TableRow className="[&_th]:font-semibold [&_th]:text-gold-600">
                       <TableHead className="min-w-[120px]">Культура</TableHead>
                       <TableHead className="min-w-[120px]">
                         Влажность, %
@@ -325,19 +325,19 @@ function Index() {
                   </TableHeader>
                   <TableBody className="[&_td]:not-first:text-gold-800 dark:[&_td]:not-first:text-gold-100">
                     <TableRow>
-                      <TableCell className="font-bold text-gold-700 dark:text-gold-300">Пшеница</TableCell>
+                      <TableCell className="font-bold text-gold-500 dark:text-gold-300">Пшеница</TableCell>
                       <TableCell>до 14</TableCell>
                       <TableCell>0,5 - 4</TableCell>
                       <TableCell>клоп 0,5 - 15, зерновая 1 - 8</TableCell>
                     </TableRow>
                     <TableRow>
-                      <TableCell className="font-bold text-gold-700 dark:text-gold-300">Ячмень</TableCell>
+                      <TableCell className="font-bold text-gold-500 dark:text-gold-300">Ячмень</TableCell>
                       <TableCell>до 13</TableCell>
                       <TableCell>0,5 - 4</TableCell>
                       <TableCell>до 5</TableCell>
                     </TableRow>
                     <TableRow>
-                      <TableCell className="font-bold text-gold-700 dark:text-gold-300">Горох</TableCell>
+                      <TableCell className="font-bold text-gold-500 dark:text-gold-300">Горох</TableCell>
                       <TableCell>9 - 14</TableCell>
                       <TableCell>0,8 - 2</TableCell>
                       <TableCell>
@@ -345,25 +345,25 @@ function Index() {
                       </TableCell>
                     </TableRow>
                     <TableRow>
-                      <TableCell className="font-bold text-gold-700 dark:text-gold-300">Кукуруза</TableCell>
+                      <TableCell className="font-bold text-gold-500 dark:text-gold-300">Кукуруза</TableCell>
                       <TableCell>до 14</TableCell>
                       <TableCell>0,5 - 2</TableCell>
                       <TableCell>2 - 5</TableCell>
                     </TableRow>
                     <TableRow>
-                      <TableCell className="font-bold text-gold-700 dark:text-gold-300">Соя</TableCell>
+                      <TableCell className="font-bold text-gold-500 dark:text-gold-300">Соя</TableCell>
                       <TableCell>до 12</TableCell>
                       <TableCell>0,5 - 2</TableCell>
                       <TableCell>масленичная 2 - 6, ГМО/не ГМО</TableCell>
                     </TableRow>
                     <TableRow>
-                      <TableCell className="font-bold text-gold-700 dark:text-gold-300">Нут</TableCell>
+                      <TableCell className="font-bold text-gold-500 dark:text-gold-300">Нут</TableCell>
                       <TableCell>10 - 13,5</TableCell>
                       <TableCell>0,5 - 2</TableCell>
                       <TableCell>до 5</TableCell>
                     </TableRow>
                     <TableRow>
-                      <TableCell className="font-bold text-gold-700 dark:text-gold-300">Чечевица</TableCell>
+                      <TableCell className="font-bold text-gold-500 dark:text-gold-300">Чечевица</TableCell>
                       <TableCell>12 - 14</TableCell>
                       <TableCell>0,5 - 4</TableCell>
                       <TableCell>до 5</TableCell>
@@ -391,7 +391,7 @@ function Index() {
               <div className="overflow-x-auto">
                 <Table>
                   <TableHeader>
-                    <TableRow>
+                    <TableRow className="[&_th]:font-semibold [&_th]:text-gold-600">
                       <TableHead className="min-w-[120px]">Культура</TableHead>
                       <TableHead className="min-w-[120px]">
                         Влажность, %
@@ -405,7 +405,7 @@ function Index() {
                   </TableHeader>
                   <TableBody className="[&_td]:not-first:text-gold-800 dark:[&_td]:not-first:text-gold-100">
                     <TableRow>
-                      <TableCell className="font-bold text-gold-700 dark:text-gold-300">
+                      <TableCell className="font-bold text-gold-500 dark:text-gold-300">
                         Подсолнечник
                       </TableCell>
                       <TableCell>5 - 8</TableCell>
@@ -414,7 +414,7 @@ function Index() {
                       <TableCell>Не указано</TableCell>
                     </TableRow>
                     <TableRow>
-                      <TableCell className="font-bold text-gold-700 dark:text-gold-300">Рапс</TableCell>
+                      <TableCell className="font-bold text-gold-500 dark:text-gold-300">Рапс</TableCell>
                       <TableCell>5 - 8</TableCell>
                       <TableCell>0,5 - 4</TableCell>
                       <TableCell>40 - 46</TableCell>
@@ -443,7 +443,7 @@ function Index() {
               <div className="overflow-x-auto">
                 <Table>
                   <TableHeader>
-                    <TableRow>
+                    <TableRow className="[&_th]:font-semibold [&_th]:text-gold-600">
                       <TableHead className="min-w-[120px]">Культура</TableHead>
                       <TableHead className="min-w-[120px]">
                         Влажность, %
@@ -457,21 +457,21 @@ function Index() {
                   </TableHeader>
                   <TableBody className="[&_td]:not-first:text-gold-800 dark:[&_td]:not-first:text-gold-100">
                     <TableRow>
-                      <TableCell className="font-bold text-gold-700 dark:text-gold-300">Лён</TableCell>
+                      <TableCell className="font-bold text-gold-500 dark:text-gold-300">Лён</TableCell>
                       <TableCell>6 - 9</TableCell>
                       <TableCell>0,5 - 7</TableCell>
                       <TableCell>2 - 5</TableCell>
                       <TableCell>32 - 42</TableCell>
                     </TableRow>
                     <TableRow>
-                      <TableCell className="font-bold text-gold-700 dark:text-gold-300">Кориандр</TableCell>
+                      <TableCell className="font-bold text-gold-500 dark:text-gold-300">Кориандр</TableCell>
                       <TableCell>5 - 8</TableCell>
                       <TableCell>2 - 9</TableCell>
                       <TableCell>2 - 7</TableCell>
                       <TableCell>-</TableCell>
                     </TableRow>
                     <TableRow>
-                      <TableCell className="font-bold text-gold-700 dark:text-gold-300">Горчица</TableCell>
+                      <TableCell className="font-bold text-gold-500 dark:text-gold-300">Горчица</TableCell>
                       <TableCell>5 - 8,5</TableCell>
                       <TableCell>0,1 - 4</TableCell>
                       <TableCell>1,5 - 5</TableCell>
@@ -492,7 +492,7 @@ function Index() {
       >
         <div className="container px-2 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12 animate-hidden">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-gold-700 dark:text-gold-300">
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-gold-500 dark:text-gold-300">
               Логистические возможности
             </h2>
           </div>
@@ -544,18 +544,21 @@ function Index() {
       >
         <div className="container px-2 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12 animate-hidden">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-gold-700 dark:text-gold-300">
+            <h2 className="hidden md:block text-3xl font-bold tracking-tighter sm:text-4xl text-gold-500 dark:text-gold-300">
               Контактные данные «АГРОТРЕЙД - ЮГ»
+            </h2>
+            <h2 className="block md:hidden text-3xl font-bold tracking-tighter sm:text-4xl text-gold-500 dark:text-gold-300">
+              Контактные данные<br />«АГРОТРЕЙД - ЮГ»
             </h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 animate-hidden">
             <Card className="p-6 border-gold-200 dark:border-gold-900 shadow-gold-md card-hover-effect">
-              <h3 className="text-xl font-bold mb-4 text-gold-600 dark:text-gold-400">
+              <h3 className="text-xl font-bold mb-4 text-gold-500 dark:text-gold-400">
                 Адрес
               </h3>
               <div className="flex items-start gap-4">
-                <MapPin className="min-w-5 min-h-5 h-5 w-5 text-gold-600 dark:text-gold-400 mt-0.5" />
+                <MapPin className="min-w-5 min-h-5 h-5 w-5 text-gold-500 dark:text-gold-400 mt-0.5" />
                 <p className="text-gold-800 dark:text-gold-200">
                   Республика Крым, р-н Джанкойский, с.Днепровка, ул.
                   Житомирская, д.72
@@ -564,46 +567,46 @@ function Index() {
             </Card>
 
             <Card className="p-6 border-gold-200 dark:border-gold-900 shadow-gold-md card-hover-effect">
-              <h3 className="text-xl font-bold mb-4 text-gold-600 dark:text-gold-400">
+              <h3 className="text-xl font-bold mb-4 text-gold-500 dark:text-gold-400">
                 Регистрационные данные
               </h3>
               <div className="grid grid-cols-1 gap-4">
                 <div>
-                  <p className="font-semibold text-gold-700 dark:text-gold-300">ОГРН</p>
+                  <p className="font-semibold text-gold-500 dark:text-gold-300">ОГРН</p>
                   <p className="text-gold-800 dark:text-gold-200">
                     1159102102500
                   </p>
                 </div>
                 <div>
-                  <p className="font-semibold text-gold-700 dark:text-gold-300">ИНН</p>
+                  <p className="font-semibold text-gold-500 dark:text-gold-300">ИНН</p>
                   <p className="text-gold-800 dark:text-gold-200">9105013878</p>
                 </div>
                 <div>
-                  <p className="font-semibold text-gold-700 dark:text-gold-300">КПП</p>
+                  <p className="font-semibold text-gold-500 dark:text-gold-300">КПП</p>
                   <p className="text-gold-800 dark:text-gold-200">910501001</p>
                 </div>
               </div>
             </Card>
 
             <Card className="p-6 border-gold-200 dark:border-gold-900 shadow-gold-md card-hover-effect">
-              <h3 className="text-xl font-bold mb-4 text-gold-600 dark:text-gold-400">
+              <h3 className="text-xl font-bold mb-4 text-gold-500 dark:text-gold-400">
                 Контакты руководства
               </h3>
               <div className="space-y-4">
                 <div className="flex items-start gap-4">
-                  <Phone className="min-h-5 min-w-5 h-5 w-5 text-gold-600 dark:text-gold-400 mt-0.5" />
+                  <Phone className="min-h-5 min-w-5 h-5 w-5 text-gold-500 dark:text-gold-400 mt-0.5" />
                   <div>
                     <p className="text-gold-800 dark:text-gold-200">
-                      Генеральный директор: <a className="text-gold-600 dark:text-gold-200 decoration-1 underline hover:decoration-2 underline-offset-4" href="tel:+79780630610">+7(978) 063-06-10</a>, Бессмертный Виктор
+                      Генеральный директор: <a className="text-gold-500 dark:text-gold-200 decoration-1 underline hover:decoration-2 underline-offset-4" href="tel:+79780630610">+7(978) 063-06-10</a>, Бессмертный Виктор
                       Викторович
                     </p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
-                  <Phone className="min-w-5 min-h-5 h-5 w-5 text-gold-600 dark:text-gold-400 mt-0.5" />
+                  <Phone className="min-w-5 min-h-5 h-5 w-5 text-gold-500 dark:text-gold-400 mt-0.5" />
                   <div>
                     <p className="text-gold-800 dark:text-gold-200">
-                      Первый заместитель: <a className="text-gold-600 dark:text-gold-200 decoration-1 underline hover:decoration-2 underline-offset-4" href="tel:+79784661456">+7(978) 466-14-56</a>, Антонова Юлия
+                      Первый заместитель: <a className="text-gold-500 dark:text-gold-200 decoration-1 underline hover:decoration-2 underline-offset-4" href="tel:+79784661456">+7(978) 466-14-56</a>, Антонова Юлия
                       Александровна
                     </p>
                   </div>
@@ -612,12 +615,12 @@ function Index() {
             </Card>
 
             <Card className="p-6 border-gold-200 dark:border-gold-900 shadow-gold-md card-hover-effect">
-              <h3 className="text-xl font-bold mb-4 text-gold-600 dark:text-gold-400">
+              <h3 className="text-xl font-bold mb-4 text-gold-500 dark:text-gold-400">
                 Электронная почта
               </h3>
               <div className="flex items-start gap-4">
-                <Mail className="min-w-5 min-h-5 h-5 w-5 text-gold-600 dark:text-gold-400 mt-0.5" />
-                <a href="mailto:zerno_ru@bk.ru" className="text-gold-600 dark:text-gold-200 decoration-1 underline hover:decoration-2 underline-offset-4">
+                <Mail className="min-w-5 min-h-5 h-5 w-5 text-gold-500 dark:text-gold-400 mt-0.5" />
+                <a href="mailto:zerno_ru@bk.ru" className="text-gold-500 dark:text-gold-200 decoration-1 underline hover:decoration-2 underline-offset-4">
                   zerno_ru@bk.ru
                 </a>
               </div>
