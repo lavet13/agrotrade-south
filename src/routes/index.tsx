@@ -597,7 +597,7 @@ function Index() {
                   <Phone className="min-h-5 min-w-5 h-5 w-5 text-gold-500 dark:text-gold-400 mt-0.5" />
                   <div>
                     <p className="text-gold-800 dark:text-gold-200">
-                      Генеральный директор: <a className="text-gold-500 dark:text-gold-200 decoration-1 underline hover:decoration-2 underline-offset-4" href="tel:+79780630610">+7(978) 063-06-10</a>, Бессмертный Виктор
+                      Генеральный директор: <a className="text-gold-500 dark:text-gold-200 decoration-1 underline hover:decoration-2 underline-offset-4" href="tel:+79780630610">+7(978) 063-06-10</a> | <a className="text-gold-500 dark:text-gold-200 decoration-1 underline hover:decoration-2 underline-offset-4" href="https://t.me/+79780630610">Telegram</a> | <a className="text-gold-500 dark:text-gold-200 decoration-1 underline hover:decoration-2 underline-offset-4" href="https://wa.me/+79780630610">Whatsapp</a> Бессмертный Виктор
                       Викторович
                     </p>
                   </div>
@@ -606,7 +606,7 @@ function Index() {
                   <Phone className="min-w-5 min-h-5 h-5 w-5 text-gold-500 dark:text-gold-400 mt-0.5" />
                   <div>
                     <p className="text-gold-800 dark:text-gold-200">
-                      Первый заместитель: <a className="text-gold-500 dark:text-gold-200 decoration-1 underline hover:decoration-2 underline-offset-4" href="tel:+79784661456">+7(978) 466-14-56</a>, Антонова Юлия
+                      Первый заместитель: <a className="text-gold-500 dark:text-gold-200 decoration-1 underline hover:decoration-2 underline-offset-4" href="tel:+79784661456">+7(978) 466-14-56</a> | <a className="text-gold-500 dark:text-gold-200 decoration-1 underline hover:decoration-2 underline-offset-4" href="https://t.me/+79784661456">Telegram</a> | <a className="text-gold-500 dark:text-gold-200 decoration-1 underline hover:decoration-2 underline-offset-4" href="https://wa.me/+79784661456">Whatsapp</a>, Антонова Юлия
                       Александровна
                     </p>
                   </div>
