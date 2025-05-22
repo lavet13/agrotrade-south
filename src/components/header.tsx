@@ -10,13 +10,16 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-gold-200 dark:border-gold-900 bg-white/90 dark:bg-gray-950/90 backdrop-blur-sm">
       <div className="container flex h-12 items-center my-2 px-4 md:px-6">
-        <Link
-          to="/"
-          activeOptions={{ exact: true }}
-          className="flex items-center p-0.5 px-2 rounded-2xl gap-2 mr-6 whitespace-nowrap bg-gold-100/50 dark:bg-gold-100"
-        >
-          <img className="rounded-2xl w-[200px] mix-blend-multiply" src="/logo.jpg" />
-        </Link>
+        <div className="flex gap-2 items-center">
+          <Link
+            to="/"
+            activeOptions={{ exact: true }}
+            className="flex items-center p-0.5 px-2 rounded-2xl gap-2 whitespace-nowrap bg-gold-100/50 dark:bg-gold-100"
+          >
+            <img className="rounded-2xl w-[200px] mix-blend-multiply" src="/logo.jpg" />
+          </Link>
+          <ModeToggle className="hidden lg:flex" />
+        </div>
 
         {/* Desktop Navigation */}
         <nav className="hidden lg:flex flex-1 items-center justify-center gap-6">
@@ -72,7 +75,7 @@ export default function Header() {
         </nav>
 
         <div className="flex items-center gap-2 ml-auto">
-          <ModeToggle />
+          <ModeToggle className="flex lg:hidden" />
           <Button
             variant="outline"
             className="size-8 border-gold-200 dark:border-gold-800 text-gold-600 hover:text-gold-700 dark:text-gold-400 hover:bg-gold-100 dark:hover:bg-gold-900/50 lg:hidden"
