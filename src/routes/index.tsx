@@ -72,7 +72,7 @@ function Index() {
       </section>
 
       {/* О компании */}
-      <section id="company" className="w-full py-12 md:py-16">
+      <section id="company" className="w-full py-12 pt-17 md:py-16">
         <div className="container px-4 md:px-6">
           <div className="flex flex-col lg:flex-row justify-center gap-2">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-2 animate-hidden">
@@ -136,7 +136,7 @@ function Index() {
         </div>
       </section>
 
-      <section id="productivity" className="w-full py-8 md:py-24">
+      <section id="productivity" className="w-full py-8 pt-17 md:py-24">
         <div className="container px-2 md:px-6">
           {/* Production Chart Using Shadcn/UI Component */}
           <div className="mt-4 animate-hidden">
@@ -203,7 +203,7 @@ function Index() {
       </section>
 
       {/* Regions Section */}
-      <section id="regions" className="w-full py-8 md:py-24">
+      <section id="regions" className="w-full py-8 pt-17 md:py-24">
         <div className="container px-2 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12 animate-hidden">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl lg:text-5xl text-gold-500 dark:text-gold-300">
@@ -269,7 +269,7 @@ function Index() {
       <AgriculturalCrops />
 
       {/* Quality Parameters Section */}
-      <section id="quality" className="w-full py-8 md:py-24">
+      <section id="quality" className="w-full py-8 pt-17 md:py-24">
         <div className="container px-2 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12 animate-hidden">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-gold-500 dark:text-gold-300">
@@ -490,7 +490,7 @@ function Index() {
       </section>
 
       {/* Логистические возможности Section - Pyramid Style */}
-      <section id="logistics" className="w-full py-8 md:py-24">
+      <section id="logistics" className="w-full py-8 pt-17 md:py-24">
         <div className="container px-2 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12 animate-hidden">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-gold-500 dark:text-gold-300">
@@ -539,7 +539,7 @@ function Index() {
       </section>
 
       {/* Contact Section */}
-      <section id="contacts" className="w-full py-8 md:py-24">
+      <section id="contacts" className="w-full py-8 pt-17 md:py-24">
         <div className="container px-2 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12 animate-hidden">
             <h2 className="hidden md:block text-3xl font-bold tracking-tighter sm:text-4xl text-gold-500 dark:text-gold-300">

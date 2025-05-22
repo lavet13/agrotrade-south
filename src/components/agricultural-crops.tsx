@@ -13,7 +13,7 @@ export default function AgriculturalCrops() {
   return (
     <section
       id="products"
-      className="w-full py-8 md:py-24"
+      className="w-full py-8 pt-17 md:py-24"
     >
       <div className="container px-4 mx-auto max-w-7xl">
         {/* Header with refined styling */}
@@ -38,20 +38,20 @@ export default function AgriculturalCrops() {
               <div className="flex items-center mb-6">
                 <div className="w-12 h-12 rounded-xl flex items-center justify-center mr-4 text-gold-600 bg-gold-100 dark:bg-gold-900/50">
                   <Wheat
-                    className="h-6 w-6 text-gold-600 dark:text-gold-400"
+                    className="h-6 w-6 text-gold-500 dark:text-gold-400"
                     strokeWidth={1.5}
                   />
                 </div>
-                <h3 className="text-lg font-semibold text-gold-700 dark:text-gold-400">
+                <h3 className="text-lg font-semibold text-gold-500 dark:text-gold-400">
                   Зерновые и зернобобовые
                 </h3>
               </div>
 
               <ul className="space-y-4">
                 <li className="flex items-center gap-3 pl-2 transition-colors">
-                  <div className="flex-shrink-0 w-8 h-8 rounded-lg flex items-center justify-center text-gold-600 bg-gold-100 dark:bg-gold-900/50">
+                  <div className="flex-shrink-0 w-8 h-8 rounded-lg flex items-center justify-center text-gold-500 bg-gold-100 dark:bg-gold-900/50">
                     <Wheat
-                      className="h-4 w-4 text-gold-600 dark:text-gold-400"
+                      className="h-4 w-4 text-gold-500 dark:text-gold-400"
                       strokeWidth={1.5}
                     />
                   </div>
@@ -60,9 +60,9 @@ export default function AgriculturalCrops() {
                   </span>
                 </li>
                 <li className="flex items-center gap-3 pl-2 transition-colors">
-                  <div className="flex-shrink-0 w-8 h-8 rounded-lg flex items-center justify-center text-gold-600 bg-gold-100 dark:bg-gold-900/50">
+                  <div className="flex-shrink-0 w-8 h-8 rounded-lg flex items-center justify-center text-gold-500 bg-gold-100 dark:bg-gold-900/50">
                     <Sprout
-                      className="h-4 w-4 text-gold-600 dark:text-gold-400"
+                      className="h-4 w-4 text-gold-500 dark:text-gold-400"
                       strokeWidth={1.5}
                     />
                   </div>
@@ -71,9 +71,9 @@ export default function AgriculturalCrops() {
                   </span>
                 </li>
                 <li className="flex items-center gap-3 pl-2 transition-colors">
-                  <div className="flex-shrink-0 w-8 h-8 rounded-lg flex items-center justify-center text-gold-600 bg-gold-100 dark:bg-gold-900/50">
+                  <div className="flex-shrink-0 w-8 h-8 rounded-lg flex items-center justify-center text-gold-500 bg-gold-100 dark:bg-gold-900/50">
                     <Bean
-                      className="h-4 w-4 text-gold-600 dark:text-gold-400"
+                      className="h-4 w-4 text-gold-500 dark:text-gold-400"
                       strokeWidth={1.5}
                     />
                   </div>
@@ -145,9 +145,9 @@ export default function AgriculturalCrops() {
             ></div>
             <div className="pt-8 pb-6 px-6">
               <div className="flex items-center mb-6">
-                <div className="w-12 h-12 rounded-xl flex items-center justify-center mr-4 text-gold-600 bg-gold-100 dark:bg-gold-900/50">
+                <div className="w-12 h-12 rounded-xl flex items-center justify-center mr-4 text-gold-700 bg-gold-100 dark:bg-gold-900/50">
                   <Leaf
-                    className="h-6 w-6 text-gold-600 dark:text-gold-400"
+                    className="h-6 w-6 text-gold-700 dark:text-gold-400"
                     strokeWidth={1.5}
                   />
                 </div>
@@ -158,9 +158,9 @@ export default function AgriculturalCrops() {
 
               <ul className="space-y-4">
                 <li className="flex items-center gap-3 pl-2 transition-colors">
-                  <div className="flex-shrink-0 w-8 h-8 rounded-lg flex items-center justify-center text-gold-600 bg-gold-100 dark:bg-gold-900/50">
+                  <div className="flex-shrink-0 w-8 h-8 rounded-lg flex items-center justify-center text-gold-700 bg-gold-100 dark:bg-gold-900/50">
                     <Sprout
-                      className="h-4 w-4 text-gold-600 dark:text-gold-400"
+                      className="h-4 w-4 text-gold-700 dark:text-gold-400"
                       strokeWidth={1.5}
                     />
                   </div>
@@ -169,9 +169,9 @@ export default function AgriculturalCrops() {
                   </span>
                 </li>
                 <li className="flex items-center gap-3 pl-2 transition-colors">
-                  <div className="flex-shrink-0 w-8 h-8 rounded-lg flex items-center justify-center text-gold-600 bg-gold-100 dark:bg-gold-900/50">
+                  <div className="flex-shrink-0 w-8 h-8 rounded-lg flex items-center justify-center text-gold-700 bg-gold-100 dark:bg-gold-900/50">
                     <Droplets
-                      className="h-4 w-4 text-gold-600 dark:text-gold-400"
+                      className="h-4 w-4 text-gold-700 dark:text-gold-400"
                       strokeWidth={1.5}
                     />
                   </div>
@@ -180,9 +180,9 @@ export default function AgriculturalCrops() {
                   </span>
                 </li>
                 <li className="flex items-center gap-3 pl-2 transition-colors">
-                  <div className="flex-shrink-0 w-8 h-8 rounded-lg flex items-center justify-center text-gold-600 bg-gold-100 dark:bg-gold-900/50">
+                  <div className="flex-shrink-0 w-8 h-8 rounded-lg flex items-center justify-center text-gold-700 bg-gold-100 dark:bg-gold-900/50">
                     <Seedling
-                      className="h-4 w-4 text-gold-600 dark:text-gold-400"
+                      className="h-4 w-4 text-gold-700 dark:text-gold-400"
                       strokeWidth={1.5}
                     />
                   </div>
