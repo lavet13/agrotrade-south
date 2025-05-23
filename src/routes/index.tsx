@@ -1,4 +1,5 @@
 import AgriculturalCrops from "@/components/agricultural-crops";
+import { CopyButton } from "@/components/copy-button";
 import CropProductionChart from "@/components/crop-production-chart";
 import { Card } from "@/components/ui/card";
 import { ChartContainer } from "@/components/ui/chart";
@@ -557,12 +558,23 @@ function Index() {
               <h3 className="text-xl font-bold mb-4 text-gold-500 dark:text-gold-400">
                 Адрес
               </h3>
-              <div className="flex items-start gap-4">
-                <MapPin className="min-w-5 min-h-5 h-5 w-5 text-gold-500 dark:text-gold-400 mt-0.5" />
-                <p className="text-gold-800 dark:text-gold-200">
-                  Республика Крым, р-н Джанкойский, с.Днепровка, ул.
-                  Житомирская, д.72
-                </p>
+              <div className="flex flex-col gap-2">
+                <div>
+                  <p className="font-semibold text-gold-500 dark:text-gold-300">
+                    Складские помещения
+                  </p>
+                  <p className="text-gold-800 dark:text-gold-200">
+                    Республика Крым, р-н Джанкойский, г. Джанкой, ул. Щорса, 70А
+                  </p>
+                </div>
+                <div>
+                  <p className="font-semibold text-gold-500 dark:text-gold-300">
+                    Центральный офис
+                  </p>
+                  <p className="text-gold-800 dark:text-gold-200">
+                    Республика Крым, г. Севастополь, Фиолентовское шоссе 1/2
+                  </p>
+                </div>
               </div>
             </Card>
 
@@ -596,40 +608,48 @@ function Index() {
 
             <Card className="p-6 border-gold-200 dark:border-gold-900 shadow-gold-md card-hover-effect">
               <h3 className="text-xl font-bold mb-4 text-gold-500 dark:text-gold-400">
-                Контакты руководства
+                Контакты
               </h3>
-              <div className="space-y-4">
-                <div className="flex items-start gap-4">
-                  <Phone className="min-h-5 min-w-5 h-5 w-5 text-gold-500 dark:text-gold-400 mt-0.5" />
-                  <div>
-                    <p className="text-gold-800 dark:text-gold-200">
-                      Генеральный директор:{" "}
-                      <a
-                        className="text-gold-500 dark:text-gold-200 decoration-1 underline hover:decoration-2 underline-offset-4"
-                        href="tel:+79780630610"
-                      >
-                        +7(978) 063-06-10
-                      </a>
-                      , Бессмертный Виктор Викторович
-                    </p>
-                  </div>
+              <div className="space-y-2">
+                <div className="flex gap-2">
+                  <a
+                    className="inline-flex items-center gap-2 text-gold-500 dark:text-gold-200"
+                    href="tel:+79785280549"
+                  >
+                    <Phone className="min-w-5 min-h-5 h-5 w-5 text-gold-500 dark:text-gold-400 mt-0.5" />
+                    +7(978) 528-05-49
+                  </a>
+                  <CopyButton text="+79785280549" />
                 </div>
-                <div className="flex items-start gap-4">
-                  <Phone className="min-w-5 min-h-5 h-5 w-5 text-gold-500 dark:text-gold-400 mt-0.5" />
-                  <div>
-                    <p className="text-gold-800 dark:text-gold-200">
-                      Первый заместитель:{" "}
-                      <div className="inline-flex gap-2">
-                        <a
-                          className="text-gold-500 dark:text-gold-200 decoration-1 underline hover:decoration-2 underline-offset-4"
-                          href="tel:+79785280549"
-                        >
-                          +7(978) 528-05-49
-                        </a>
-                      </div>
-                      , Антонова Юлия Александровна
-                    </p>
-                  </div>
+                <div className="flex gap-2">
+                  <a
+                    className="inline-flex items-center gap-2 text-gold-500 dark:text-gold-200"
+                    href="tel:+79785649002"
+                  >
+                    <Phone className="min-w-5 min-h-5 h-5 w-5 text-gold-500 dark:text-gold-400 mt-0.5" />
+                    +7(978) 564-90-02
+                  </a>
+                  <CopyButton text="+79785649002" />
+                </div>
+                <div className="flex gap-2">
+                  <a
+                    className="inline-flex items-center gap-2 text-gold-500 dark:text-gold-200"
+                    href="tel:+79785336286"
+                  >
+                    <Phone className="min-w-5 min-h-5 h-5 w-5 text-gold-500 dark:text-gold-400 mt-0.5" />
+                    +7(978) 533-62-86
+                  </a>
+                  <CopyButton text="+79785336286" />
+                </div>
+                <div className="flex gap-2">
+                  <a
+                    className="inline-flex items-center gap-2 text-gold-500 dark:text-gold-200"
+                    href="tel:+79784661456"
+                  >
+                    <Phone className="min-w-5 min-h-5 h-5 w-5 text-gold-500 dark:text-gold-400 mt-0.5" />
+                    +7(978) 466-14-56
+                  </a>
+                  <CopyButton text="+79784661456" />
                 </div>
               </div>
             </Card>
@@ -642,7 +662,7 @@ function Index() {
                 <Mail className="min-w-5 min-h-5 h-5 w-5 text-gold-500 dark:text-gold-400 mt-0.5" />
                 <a
                   href="mailto:zerno_ru@bk.ru"
-                  className="text-gold-500 dark:text-gold-200 decoration-1 underline hover:decoration-2 underline-offset-4"
+                  className="text-gold-500 dark:text-gold-200"
                 >
                   zerno_ru@bk.ru
                 </a>
