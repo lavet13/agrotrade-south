@@ -530,7 +530,7 @@ function Index() {
               <div className="flex justify-center">
                 <div className="w-full p-6 bg-gold-600 text-white rounded-lg text-center shadow-lg">
                   <Building className="h-8 w-8 mx-auto mb-2" />
-                  <h3 className="font-bold">Офис и складские помещения</h3>
+                  <h3 className="font-bold">Складские комплексы</h3>
                   <p className="text-sm mt-2">Хранение и отгрузка</p>
                 </div>
               </div>
@@ -561,7 +561,7 @@ function Index() {
               <div className="flex flex-col gap-2">
                 <div>
                   <p className="font-semibold text-gold-500 dark:text-gold-300">
-                    Складские помещения
+                    Офис и складские помещения
                   </p>
                   <p className="text-gold-800 dark:text-gold-200">
                     Республика Крым, р-н Джанкойский, г. Джанкой, ул. Щорса, 70А
